@@ -45,14 +45,21 @@ function styles() {
     .pipe(dest('./dist'));
 }
 
+function assets() {
+  return src(paths.src + 'assets/*')
+    .pipe(connect.reload())
+    .pipe(dest('./dist/assets'));
+}
+
 function watching(cb) {
   watch('src/index.html', html);
   watch('src/**/*.scss', styles);
+  watch('src/assets/**/*', assets);
 
   cb();
 }
 
-const gulpTasks = [clean, html, styles];
+const gulpTasks = [clean, html, styles, assets];
 
 exports.build = series(...gulpTasks);
 exports.default = series(
