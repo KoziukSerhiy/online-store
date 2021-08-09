@@ -1,5 +1,17 @@
+@use '../utils/colors' as *;
+@use '../utils/fonts' as *;
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $background-default;
+  font-family: $font-family;
 }

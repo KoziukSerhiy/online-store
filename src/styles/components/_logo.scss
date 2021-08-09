@@ -1,0 +1,19 @@
+@use '../utils/colors' as *;
+
+.os-logo {
+  display: flex;
+  align-items: center;
+
+  .img {
+    width: 91px;
+    height: 72px;
+  }
+
+  .text {
+    display: inline-block;
+    padding-left: 22px;
+    font-weight: 600;
+    font-size: 48px;
+    color: $primary-normal;
+  }
+}

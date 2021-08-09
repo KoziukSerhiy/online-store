@@ -1,0 +1,27 @@
+@use '../utils/colors' as *;
+
+.os-breadcrumb {
+  .list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .item {
+    padding-right: 12px;
+    
+    &:last-child {
+      .link {
+        color: $typography-primary;
+        cursor: default;
+      }
+    }
+  }
+
+  .link {
+    text-decoration: none;
+    color: $primary-normal;
+  }
+}
