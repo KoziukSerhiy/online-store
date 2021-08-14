@@ -11,9 +11,10 @@
 
   .item {
     padding-right: 12px;
-    
+
     &:last-child {
       .link {
+        font-size: 14px;
         color: $typography-primary;
         cursor: default;
       }
