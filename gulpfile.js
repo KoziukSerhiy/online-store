@@ -46,7 +46,7 @@ function styles() {
 }
 
 function assets() {
-  return src(paths.src + 'assets/*')
+  return src(paths.src + 'assets/**/*')
     .pipe(connect.reload())
     .pipe(dest('./dist/assets'));
 }

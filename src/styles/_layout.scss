@@ -4,3 +4,26 @@
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.os-overflow-text-hidden {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// .os-d-flex {
+//   display: flex;
+// }
+
+// .os-flex-align-center {
+//   @extend .os-d-flex;
+//   align-items: center;
+// }
+
+// .os-flex-justify-between {
+//   @extend .os-d-flex;
+//   justify-content: space-between;
+// }
+
+

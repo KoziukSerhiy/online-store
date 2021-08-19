@@ -10,13 +10,20 @@
   }
 
   .item {
+    display: flex;
+    align-items: center;
     padding-right: 12px;
 
     &:last-child {
       .link {
-        font-size: 14px;
-        color: $typography-primary;
+        padding-right: 0;
+        font-size: 0.875rem;
+        color: $typography-700;
         cursor: default;
+      }
+
+      .link-icon {
+        display: none;
       }
     }
   }
@@ -24,5 +31,11 @@
   .link {
     text-decoration: none;
     color: $primary-normal;
+  }
+
+  .link-icon {
+    padding-left: 12px;
+    font-size: 1.125rem;
+    color: $typography-900;
   }
 }

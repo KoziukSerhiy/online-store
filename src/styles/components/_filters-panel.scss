@@ -1,0 +1,59 @@
+@use '../utils/colors' as *;
+@use '../utils/variables' as *;
+
+.os-filters-panel {
+  &-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  &-title {
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+  .toggle-filters {
+    font-size: 1.125rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+  }
+
+  &-content {
+    padding: 0 30px;
+    box-shadow: $box-shadow;
+    background-color: $background-0;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+
+    .os-form-checkbox {
+      margin-bottom: 0;
+    }
+
+    .amount {
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 1rem;
+      font-weight: 300;
+      color: $typography-700;
+    }
+  }
+
+  .clear-filters {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    font-size: 1.125rem;
+  }
+}

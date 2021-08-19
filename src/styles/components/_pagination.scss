@@ -1,0 +1,56 @@
+@use 'sass:math';
+@use '../utils/colors' as *;
+
+$page-link-size: 40px;
+
+.os-pagination {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+
+  a {
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .previous,
+  .next {
+    color: $typography-900;
+    font-size: 1.75rem;
+  }
+
+  .previous {
+    margin-right: 15px;
+  }
+
+  .next {
+    margin-left: 15px;
+  }
+
+  .page-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: $background-500;
+    list-style: none;
+    border-radius: math.div($page-link-size, 2);
+  }
+
+  .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $page-link-size;
+    height: $page-link-size;
+    background-color: $background-500;
+    border-radius: math.div($page-link-size, 2);
+    color: $typography-700;
+    transition: 0.3s;
+
+    &:hover,
+    &.active {
+      background-color: $primary-normal;
+      color: $typography-0;
+    }
+  }
+}

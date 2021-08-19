@@ -1,5 +1,5 @@
 @use '../utils/colors' as *;
-@use '../utils/fonts' as *;
+@use '../utils/variables' as *;
 
 *,
 *::after,
@@ -7,11 +7,40 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
+}
+
+/*
+  10px = 0.625rem
+  12px = 0.75rem
+  14px = 0.875rem
+  16px = 1rem (base)
+  18px = 1.125rem
+  20px = 1.25rem
+  24px = 1.5rem
+  30px = 1.875rem
+  32px = 2rem
+*/
+html {
+  font-size: 16px;
 }
 
 body {
   background-color: $background-default;
   font-family: $font-family;
+}
+
+h3,
+h4 {
+  margin-bottom: 22px;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+h4 {
+  font-size: 1rem;
 }

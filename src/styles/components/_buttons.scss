@@ -1,0 +1,48 @@
+@use 'sass:map';
+@use 'sass:color';
+@use '../utils/colors' as *;
+@use '../utils/variables' as *;
+
+$btns: (
+  primary: (
+    bg: $primary-normal,
+    text: $typography-0
+  ),
+  default: (
+    bg: $background-500,
+    text: $typography-900
+  ),
+  'white': (
+    bg: $background-0,
+    text: $typography-300
+  )
+);
+
+%os-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: $font-family;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@each $class-name, $data in $btns {
+  .os-btn-#{$class-name} {
+    $bg: map.get($data, bg);
+    $text: map.get($data, text);
+
+    @extend %os-btn;
+
+    background-color: $bg;
+    color: $text;
+
+    &:hover {
+      background-color: darken($bg, 4);
+    }
+  }
+}
