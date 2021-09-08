@@ -11,7 +11,7 @@
 
   &-img {
     display: flex;
-    height: 330px;
+    height: 200px;
     justify-content: center;
     margin: 12px 12px 0;
     background-repeat: no-repeat;
@@ -42,6 +42,10 @@
     color: $typography-0;
     font-size: 0.875rem;
     font-weight: 400;
+
+    .star-rate {
+      font-size: 0.875rem;
+    }
   }
 
   &-price {
@@ -53,13 +57,14 @@
   &-title,
   &-description {
     margin: 0;
-    
+
     font-weight: normal;
     color: $typography-700;
   }
 
   &-title {
     font-size: 1rem;
+    margin-bottom: 8px;
   }
 
   &-description {
@@ -71,9 +76,19 @@
     grid-template-columns: 1fr 1fr;
 
     button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding-top: 13px;
       padding-bottom: 13px;
       border-radius: 0;
     }
+  }
+
+  &-wish-icon,
+  &-shopping-bag {
+    display: inline-block;
+    font-size: 1.125rem;
+    margin-right: 3px;
   }
 }

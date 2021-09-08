@@ -1,6 +1,8 @@
 .os-container {
   display: block;
   width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -11,19 +13,3 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
-// .os-d-flex {
-//   display: flex;
-// }
-
-// .os-flex-align-center {
-//   @extend .os-d-flex;
-//   align-items: center;
-// }
-
-// .os-flex-justify-between {
-//   @extend .os-d-flex;
-//   justify-content: space-between;
-// }
-
-
