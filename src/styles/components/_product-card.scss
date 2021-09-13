@@ -42,10 +42,6 @@
     color: $typography-0;
     font-size: 0.875rem;
     font-weight: 400;
-
-    .star-rate {
-      font-size: 0.875rem;
-    }
   }
 
   &-price {
@@ -88,7 +84,6 @@
   &-wish-icon,
   &-shopping-bag {
     display: inline-block;
-    font-size: 1.125rem;
     margin-right: 3px;
   }
 }
