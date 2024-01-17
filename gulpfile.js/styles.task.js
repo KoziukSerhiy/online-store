@@ -2,6 +2,7 @@ const { src, dest } = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
 const sourceMaps = require("gulp-sourcemaps");
+const mode = require("gulp-mode")();
 const plumber = require("gulp-plumber");
 
 const { PATH } = require("./constants");
@@ -13,7 +14,7 @@ const sassConfig = {
 const styles = () => {
   return src(`${PATH.src}/styles/*.scss`)
     .pipe(plumber())
-    .pipe(sourceMaps.init())
+    .pipe(mode.development(sourceMaps.init()))
     .pipe(sass(sassConfig).on("error", sass.logError))
     .pipe(
       autoprefixer({
@@ -21,7 +22,7 @@ const styles = () => {
         cascade: false,
       })
     )
-    .pipe(sourceMaps.write("."))
+    .pipe(mode.development(sourceMaps.write(".")))
     .pipe(plumber.stop())
     .pipe(dest(PATH.dist));
 };

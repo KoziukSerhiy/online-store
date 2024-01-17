@@ -4,8 +4,8 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "gulp --development",
+    "build": "gulp build --production"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-file-include": "^2.3.0",
+    "gulp-mode": "^1.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
     "gulp-server-livereload": "^1.9.2",

@@ -8,16 +8,18 @@ const { styles } = require("./styles.task");
 const { assets } = require("./assets.task");
 const { server } = require("./server.task");
 
-function watching() {
+const watching = () => {
   watch(`${PATH.src}/**/*.html`, html);
   watch(`${PATH.src}/styles/**/*.scss`, styles);
   watch(`${PATH.src}/assets/**/*`, assets);
-}
+};
 
-exports.default = series(
+const develop = series(
   clean,
   parallel(html, styles, assets),
   parallel(watching, server)
 );
+const build = series(clean, parallel(html, styles, assets));
 
-exports.build = series(clean, parallel(html, styles, assets));
+exports.default = develop;
+exports.build = build;
