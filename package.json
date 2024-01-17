@@ -4,7 +4,6 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "ci": "npm install",
     "start": "gulp --development",
     "build": "gulp build --production"
   },
