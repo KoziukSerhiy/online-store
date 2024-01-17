@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
         
       - name: Build the app
         run: npm run build
