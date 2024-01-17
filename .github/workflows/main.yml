@@ -1,15 +1,11 @@
 name: Build and Deploy
-
 on:
   push:
     branches: ["master"]
-
   workflow_dispatch:
-
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    
     steps:
       - uses: actions/setup-node@v3
       - name: Install Dependencies
@@ -17,7 +13,7 @@ jobs:
         
       - name: Build the app
         run: npm run build
-
+        
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
