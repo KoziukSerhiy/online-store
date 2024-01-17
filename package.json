@@ -2,21 +2,23 @@
   "name": "online-store",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
-    "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "del": "^6.1.1",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^9.0.0",
-    "gulp-connect": "^5.7.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-plumber": "^1.2.1",
     "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.69.7"
   }
 }
