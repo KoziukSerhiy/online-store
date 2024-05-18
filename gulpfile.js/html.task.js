@@ -9,6 +9,12 @@ const fileIncludeConfig = {
   basepath: "@file",
 };
 
+/**
+ * The 'html' function is a Gulp task that processes HTML files.
+ * It takes no parameters.
+ *
+ * @returns {Object} A Gulp stream object representing the processed HTML files.
+ */
 const html = () => {
   return src(`${PATH.src}/*.html`)
     .pipe(plumber())

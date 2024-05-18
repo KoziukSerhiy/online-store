@@ -19,6 +19,7 @@ const develop = series(
   parallel(html, styles, assets),
   parallel(watching, server)
 );
+
 const build = series(clean, parallel(html, styles, assets));
 
 exports.default = develop;

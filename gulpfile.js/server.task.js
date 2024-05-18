@@ -9,6 +9,11 @@ const serverConfig = {
   open: true,
 };
 
+/**
+ * Function to start the server.
+ *
+ * @returns {Object} The server instance.
+ */
 const startServer = () => {
   return src(PATH.dist).pipe(server(serverConfig));
 };

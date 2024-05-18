@@ -11,6 +11,11 @@ const sassConfig = {
   outputStyle: "compressed",
 };
 
+/**
+ * The 'styles' function compiles SCSS files into CSS, applies autoprefixer, and generates source maps.
+ *
+ * @returns {Object} A Gulp stream that compiles SCSS files into CSS and applies autoprefixer.
+ */
 const styles = () => {
   return src(`${PATH.src}/styles/*.scss`)
     .pipe(plumber())
